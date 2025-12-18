@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HMSL Swadesh List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Garamond, serif; 
+    background-color: #fffff5;
+    color: #2F4F4F
+}
+
+.list button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  font-family: Garamond, serif;
+  color: #2F4F4F;
+  text-decoration-line: underline;
+}
+
+.list button:hover {
+    color: #8FBC8F;
+}
+
+.list button.active {
+  color: #8FBC8F;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #8FBC8F;
+}
+
+div.list {
+    width:30%;
+    display:inline-grid;
+    padding: 17px;
+}
+
+div.entry {
+  width:60%;  
+  display:inline-grid;
+}
+
+.search-box {
+    padding: 6px;
+    width: 200px;
+    border: 1px solid #2F4F4F;
+    border-radius: 4px;
+}
+</style>
+</head>
+<body>
+    <h1>Higland Maya Sign Language Swadesh List</h1>
+    <p>This is an archive of vocabulary items from a modified version of the Swadesh list eliceted from signers from Maya communities in the Highland region of Guatemala, as well as some entries from LENSEGUA from <a href="https://lensegua.com/material-lensegua-kitsord">lensegua.com</a>.</p>
+    <div>
+        <h3>Look up a sign using the search bar below:</h3>
+        <p>
+            <label for="sign"></label>
+            <input type="search" name="sign" id="sign" class="search-box" placeholder="Search..." onsearch="searchFunction()" required/>
+        </p>
+        <p>
+            <button>Search</button>
+        </p>
+    </div>
+
+    <script>
+        function searchFunction() {
+            let input=document.getElementById("sign").value.toLowerCase();
+            let items=document.querySelectorAll("#itemList li");
+            items.forEach(item=>{
+                if (item.innerHTML.toLowerCase().includes(input)){
+                    item.style.display="";
+                }else{
+                    item.style.display="none";
+                }
+            });
+        }
+
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+    <div class="list">
+        <ul id="itemList">
+            <li><button class="tablinks" onclick="openCity(event, 'chicken')">chicken</button></li>
+            <li><button class="tablinks" onclick="openCity(event, 'whale')">whale</button></li>
+            <li><button class="tablinks" onclick="openCity(event, 'shark')">shark</button></li>
+            <li><button class="tablinks" onclick="openCity(event, 'worm')">worm</li>
+            <li><button class="tablinks" onclick="openCity(event, 'butterfly')">butterfly</li>
+            <li><button class="tablinks" onclick="openCity(event, 'dolphin')">dolphin</li>
+            <li><button class="tablinks" onclick="openCity(event, 'slug')">slug</li>
+            <li><button class="tablinks" onclick="openCity(event, 'snake')">snake</li>
+            <li><button class="tablinks" onclick="openCity(event, 'bear')">bear</li>
+            <li><button class="tablinks" onclick="openCity(event, 'caterpillar')">caterpillar</li>
+            <li><button class="tablinks" onclick="openCity(event, 'fly')">fly</li>
+            <li><button class="tablinks" onclick="openCity(event, 'cow')">cow</li>
+            <li><button class="tablinks" onclick="openCity(event, 'snail')">snail</li>
+            <li><button class="tablinks" onclick="openCity(event, 'bee')">bee</li>
+            <li><button class="tablinks" onclick="openCity(event, 'louse')">louse</li>
+            <li><button class="tablinks" onclick="openCity(event, 'horse')">horse</li>
+            <li><button class="tablinks" onclick="openCity(event, 'cat')">cat</li>
+            <li><button class="tablinks" onclick="openCity(event, 'spider')">spider</li>
+            <li><button class="tablinks" onclick="openCity(event, 'goat')">goat</li>
+            <li><button class="tablinks" onclick="openCity(event, 'pig')">pig</li>
+            <li><button class="tablinks" onclick="openCity(event, 'dog')">dog</li>
+            <li><button class="tablinks" onclick="openCity(event, 'sheep')">sheep</li>
+            <li><button class="tablinks" onclick="openCity(event, 'ant')">ant</li>
+            <li><button class="tablinks" onclick="openCity(event, 'bird')">bird</li>
+            <li><button class="tablinks" onclick="openCity(event, 'fish')">fish</li>
+            <li><button class="tablinks" onclick="openCity(event, 'lion_lioness')">lion_lioness</li>
+            <li><button class="tablinks" onclick="openCity(event, 'lamb')">lamb</li>
+            <li><button class="tablinks" onclick="openCity(event, 'puppy')">puppy</li>
+            <li><button class="tablinks" onclick="openCity(event, 'suckling_pig')">suckling_pig</li>
+            <li><button class="tablinks" onclick="openCity(event, 'kitten')">kitten</li>
+            <li><button class="tablinks" onclick="openCity(event, 'lion_cub')">lion_cub</li>
+        </ul>
+    </div>
+
+<div class="entry">
+    
+    <div id="chicken" class="tabcontent">
+        <h2>chicken</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_chicken.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_chicken.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h3>La Esperanza</h3>
+        <video width="420" height="240" controls>
+            <source src="MVI_3856_L_chicken.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h3>Patzicia</h3>
+        <video width="420" height="240" controls>
+            <source src="MVI_3879_chicken.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h3>LENSEGUA</h3>
+        <h5>gallo</h5>
+        <video width="420" height="240" controls>
+            <source src="LENSEGUA_chicken_gallo.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        <h5>gallina</h5>
+        <video width="420" height="240" controls>
+            <source src="LENSEGUA_chicken_gallina.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="whale" class="tabcontent">
+        <h2>whale</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_whale.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_whale.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="shark" class="tabcontent">
+        <h2>shark</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_shark.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_shark.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="worm" class="tabcontent">
+        <h2>worm</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_worm.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="butterfly" class="tabcontent">
+        <h2>butterfly</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_butterfly.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="dolphin" class="tabcontent">
+        <h2>dolphin</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_dolphin.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_dolphin.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="slug" class="tabcontent">
+        <h2>slug</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_slug.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_slug.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="snake" class="tabcontent">
+        <h2>snake</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_snake.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_snake.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="bear" class="tabcontent">
+        <h2>bear</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_bear.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_bear.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="caterpillar" class="tabcontent">
+        <h2>caterpillar</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_caterpillar.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_caterpillar.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="fly" class="tabcontent">
+        <h2>fly</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_fly.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_fly.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="cow" class="tabcontent">
+        <h2>cow</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_cow.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_cow.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="snail" class="tabcontent">
+        <h2>snail</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_snail.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_snail.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="bee" class="tabcontent">
+        <h2>bee</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <h5>bee 1</h5>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_bee1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h5>bee 2</h5>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_bee2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_bee.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="louse" class="tabcontent">
+        <h2>louse</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_louse.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_louse.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="horse" class="tabcontent">
+        <h2>horse</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_horse.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_horse.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="cat" class="tabcontent">
+        <h2>cat</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_cat.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_cat.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="spider" class="tabcontent">
+        <h2>spider</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <h5>spider 1</h5>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_spider1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h5>spider 2</h5>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_spider2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_spider.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="goat" class="tabcontent">
+        <h2>goat</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_goat.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_goat.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="pig" class="tabcontent">
+        <h2>pig</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_pig.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_pig.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="dog" class="tabcontent">
+        <h2>dog</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_dog.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_dog.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="sheep" class="tabcontent">
+        <h2>sheep</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_sheep.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_sheep.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="ant" class="tabcontent">
+        <h2>ant</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_ant.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_ant.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="bird" class="tabcontent">
+        <h2>bird</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_bird.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_bird.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="fish" class="tabcontent">
+        <h2>fish</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_fish.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_fish.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="lion_lioness" class="tabcontent">
+        <h2>lion_lioness</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_lion_lioness.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <h5>lion</h5>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_lion.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h5>lioness</h5>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_lioness.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="lamb" class="tabcontent">
+        <h2>lamb</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_lamb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_lamb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="puppy" class="tabcontent">
+        <h2>puppy</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_puppy.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_puppy.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="suckling_pig" class="tabcontent">
+        <h2>suckling_pig</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_suckling_pig.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_suckling_pig.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="kitten" class="tabcontent">
+        <h2>kitten</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_kitten.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_kitten.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+    <div id="lion_cub" class="tabcontent">
+        <h2>lion_cub</h2>
+        <h3>Concepción</h3>
+        <h4>D18</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_2377_D18_lion_cub.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h4>H19</h4>
+        <video width="420" height="240" controls>
+            <source src="MVI_3834_H19_lion_cub.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span onclick="this.parentElement.style.display='none'">x</span>
+    </div>
+</div>
+
+</body>
+</html>
